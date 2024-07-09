@@ -1,6 +1,7 @@
 * {
 	--custom-bg-color: light-dark(rgb(235, 235, 239), rgb(31, 30, 37));
 	--tab-min-height: 32px;
+	--tab-border-radius: 10px;
 }
 
 #alltabs-button,
@@ -49,10 +50,6 @@
 	transition: 0.2s opacity ease;
 }
 
-.toolbarbutton-icon {
-	border-radius: 10px !important;
-}
-
 #navigator-toolbox:not(:hover, :focus-within, :has([open])) #nav-bar {
 	transition-delay: 0.2s !important;
 }
@@ -70,15 +67,14 @@
 
 .tab-background {
 	box-shadow: none !important;
-	border-radius: 10px !important;
 }
 
 .tab-content {
 	background-image: none !important;
 }
 
-.tab-close-button {
-	display: none;
+.tabbrowser-tab:not(:hover) .tab-close-button {
+	opacity: 0;
 }
 
 #tabbrowser-tabs {
