@@ -1,7 +1,10 @@
 * {
-	--custom-bg-color: light-dark(rgb(235, 235, 239), rgb(31, 30, 37));
+	/* firefox-defined configuration */
 	--tab-min-height: 32px;
 	--tab-border-radius: 10px;
+
+	/* custom-defined configuration */
+	--accent-fallback: light-dark(rgb(235, 235, 239), rgb(31, 30, 37));
 }
 
 #alltabs-button,
@@ -27,7 +30,7 @@
 	border-top: none !important;
 	border-radius: 10px !important;
 	border: 1px solid var(--tab-selected-bgcolor) !important;
-	background: var(--custom-bg-color) !important;
+	background: var(--lwt-accent-color, var(--accent-fallback)) !important;
 	opacity: 0;
 
 	@media (max-width: 1100px) {
@@ -115,7 +118,6 @@
 #main-window:not([chromehidden~="toolbar"]) {
 	--uc-rc-padding: 6px;
 	--uc-rc-radius: 10px;
-	--uc-browser-frame-bgcolor: var(--lwt-accent-color);
 
 	:root[inFullscreen] #navigator-toolbox[style*="margin-top"]+#browser,
 	:root[inDOMFullscreen] #browser {
@@ -127,7 +129,7 @@
 		margin-inline: var(--uc-rc-padding) !important;
 		margin-bottom: var(--uc-rc-padding) !important;
 		border-radius: var(--uc-rc-radius) !important;
-		background-color: var(--custom-bg-color) !important;
+		background-color: var(--lwt-accent-color, var(--accent-fallback)) !important;
 		position: relative !important;
 
 		&::after {
@@ -135,7 +137,7 @@
 			position: absolute;
 			inset: 0;
 			border-radius: inherit;
-			box-shadow: 0 0 0 16px var(--custom-bg-color) !important;
+			box-shadow: 0 0 0 16px var(--lwt-accent-color, var(--accent-fallback)) !important;
 			border: 1px solid var(--tab-selected-bgcolor) !important;
 			clip-path: inset(0);
 			pointer-events: none;
@@ -190,7 +192,7 @@
 	}
 
 	#browser {
-		background-color: var(--custom-bg-color) !important;
+		background-color: var(--lwt-accent-color, var(--accent-fallback)) !important;
 	}
 
 	#tabbrowser-tabpanels {
