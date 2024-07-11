@@ -1,14 +1,17 @@
 * {
-	/* firefox-defined configuration */
+	/* firefox configuration */
+
 	--tab-min-height: 32px;
 	--tab-border-radius: 10px;
 
-	/* custom-defined configuration */
+	--toolbarbutton-border-radius: var(--tab-border-radius);
+
+	/* custom configuration */
+
 	--fc-default-bg: light-dark(rgb(235, 235, 239), rgb(31, 30, 37));
 	--fc-tabbar-padding: 6px;
 	--fc-rc-border: 1px;
 
-	/* custom-derived configuration */
 	--fc-rc-padding: var(--fc-tabbar-padding);
 	--fc-rc-radius: var(--tab-border-radius);
 }
