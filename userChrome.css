@@ -121,15 +121,8 @@
 }
 
 .tabbrowser-tab {
-	transition: min-width 0.1s ease, max-width 0.1s ease !important;
-
 	&[fadein]:not([pinned]) {
-		max-width: 125px !important;
-	}
-
-	&[selected]:not([pinned]) {
-		min-width: 175px !important;
-		max-width: 175px !important;
+		max-width: 150px !important;
 	}
 }
 
