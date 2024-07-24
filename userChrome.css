@@ -104,8 +104,16 @@
 	background-image: none !important;
 }
 
+.tab-close-button {
+	transition: 0.2s opacity ease;
+}
+
 .tabbrowser-tab:not(:hover) .tab-close-button {
 	opacity: 0;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+	display: inline-flex !important;
 }
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
@@ -113,15 +121,15 @@
 }
 
 .tabbrowser-tab {
-	transition: min-width 0.2s ease, max-width 0.2s ease !important;
+	transition: min-width 0.1s ease, max-width 0.1s ease !important;
 
 	&[fadein]:not([pinned]) {
-		max-width: 175px !important;
+		max-width: 125px !important;
 	}
 
 	&[selected]:not([pinned]) {
-		min-width: 250px !important;
-		max-width: 250px !important;
+		min-width: 175px !important;
+		max-width: 175px !important;
 	}
 }
 
