@@ -1,19 +1,26 @@
 * {
-	/* firefox configuration */
-
-	--tab-min-height: 32px;
-	--tab-border-radius: 10px;
-
-	--toolbarbutton-border-radius: var(--tab-border-radius);
-
 	/* custom configuration */
 
 	--fc-default-bg: light-dark(rgb(235, 235, 239), rgb(31, 30, 37));
 	--fc-tabbar-padding: 6px;
 	--fc-rc-border: 1px;
+	--fc-radius: 0px;
+
+	--fc-tab-pad: 0px;
 
 	--fc-rc-padding: var(--fc-tabbar-padding);
-	--fc-rc-radius: var(--tab-border-radius);
+	--fc-rc-radius: var(--fc-radius);
+
+	/* firefox configuration */
+
+	--tab-min-height: calc(22px + var(--fc-tab-pad) * 2);
+	--tab-border-radius: var(--fc-radius);
+
+	--toolbarbutton-border-radius: var(--tab-border-radius);
+}
+
+.tab-content {
+	padding: 0 calc(3px + var(--fc-tab-pad)) !important;
 }
 
 :root[inFullscreen] #navigator-toolbox[style*="margin-top"]+*,
@@ -121,8 +128,14 @@
 }
 
 .tabbrowser-tab {
+	padding: var(--fc-tabbar-padding) !important;
+
+	.tab-background {
+		background-color: red !important;
+	}
+
 	&[fadein]:not([pinned]) {
-		max-width: 150px !important;
+		max-width: 175px !important;
 	}
 }
 
