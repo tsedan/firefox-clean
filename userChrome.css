@@ -75,7 +75,7 @@
 	border-bottom: none !important;
 }
 
-#navigator-toolbox:is(:hover, :focus-within, :has([open])) {
+#navigator-toolbox:is(:hover, :focus-within) {
 	#nav-bar {
 		top: 3.5rem;
 		opacity: 1;
