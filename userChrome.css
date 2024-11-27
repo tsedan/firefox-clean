@@ -1,7 +1,7 @@
 * {
 	/* firefox configuration */
 
-	--tab-min-height: 32px;
+	--tab-min-height: 36px;
 	--tab-border-radius: 10px;
 
 	--toolbarbutton-border-radius: var(--tab-border-radius);
