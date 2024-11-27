@@ -5,6 +5,8 @@
 	--tab-border-radius: 10px;
 
 	--toolbarbutton-border-radius: var(--tab-border-radius);
+	--browser-area-z-index-toolbox: 1;
+	--browser-area-z-index-tabbox: 0;
 
 	/* custom configuration */
 
@@ -36,21 +38,26 @@
 	z-index: 2;
 }
 
-#nav-bar {
+#nav-bar,
+#urlbar {
 	position: fixed !important;
 	top: 0;
+	opacity: 0;
+	transition: top 0.2s ease, opacity 0.1s ease !important;
+}
+
+#nav-bar {
 	left: 25%;
 	right: 25%;
 
-	z-index: 1;
-	transition: top 0.2s ease, opacity 0.1s ease !important;
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
 
 	border-top: none !important;
 	border-radius: var(--tab-border-radius) !important;
 	border: 1px solid var(--tab-selected-bgcolor) !important;
 
 	background: var(--lwt-accent-color, var(--fc-default-bg)) !important;
-	opacity: 0;
 
 	@media (max-width: 1100px) {
 		left: 15%;
@@ -78,9 +85,10 @@
 #navigator-toolbox:is(:hover, :focus-within) {
 	#nav-bar {
 		top: 3.5rem;
-		opacity: 1;
 	}
 
+	#nav-bar,
+	#urlbar,
 	#tabs-newtab-button {
 		opacity: 1;
 	}
