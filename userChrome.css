@@ -4,6 +4,11 @@
 	--tab-min-height: 36px;
 	--tab-border-radius: 10px;
 
+	--tab-selected-bgcolor: color-mix(in srgb, currentColor 14%, transparent);
+	--tab-selected-outline-color: transparent;
+	--tab-hover-background-color: color-mix(in srgb, currentColor 10%, transparent);
+	--tab-hover-outline-color: transparent;
+
 	--toolbarbutton-border-radius: var(--tab-border-radius);
 	--browser-area-z-index-toolbox: 1;
 	--browser-area-z-index-tabbox: 0;
