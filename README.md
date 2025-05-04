@@ -2,6 +2,8 @@
 
 Functional, minimal, and actively updated custom CSS for Firefox.
 
+![Showcase Image](showcase.webp)
+
 Plays nice with the [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) extension.
 
 # credits
